@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0ded85b-3e4b-4157-90a4-8dc48206a8b7" name="Changes" comment="Assignment 3 - extra">
-      <change beforePath="$PROJECT_DIR$/out/production/_TestApplication/_testapplication/_TestApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_TestApplication/_testapplication/_TestApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloChecker/src/modulochecker/ModuloChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModuloChecker/src/modulochecker/ModuloChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ModuloChecker/modulochecker/ModuloChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ModuloChecker/modulochecker/ModuloChecker.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667318185703</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Assignment 3 - extra">
+      <created>1667318629336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667318629336</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

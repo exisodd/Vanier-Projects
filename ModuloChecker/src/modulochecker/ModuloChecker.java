@@ -35,8 +35,7 @@ public class ModuloChecker {
 
         System.out.print("\nPlease enter an English letter: ");
         char letter = console.nextLine().charAt(0);
-        System.out.print("Please enter a buffer offset: ");
-        int buffer = Integer.parseInt(console.nextLine());
+
 
         System.out.print("Please enter a number and a letter base, separated by space: ");
         String[] in3 = console.nextLine().split(" ");
@@ -56,10 +55,12 @@ public class ModuloChecker {
         }
 
 
+        System.out.print("Please enter a buffer offset: ");
+        int buffer = console.nextInt();
         int letter_offset = letterToNumber(letter, buffer);
         int letter_base_offset = letterToNumber(letter_base, buffer);
-        System.out.printf("\n-----------Offset divisibility ('%c'->%d)------------\n",
-                letter, letter_offset);
+        System.out.printf("\n-------Offset divisibility ('%c'->%d, '%c'->%d)--------\n",
+                letter, letter_offset, letter_base, letter_base_offset);
 
         if (isDivisible(letter_offset)) {
             System.out.printf("'%c' is divisible by 3\n", letter);
