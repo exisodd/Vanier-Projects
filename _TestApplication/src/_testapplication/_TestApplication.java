@@ -19,25 +19,19 @@ public class _TestApplication {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
 
-        System.out.println(letterToNumber('g', 6));
+        System.out.print("Please enter num: ");
+        int num = console.nextInt();
+        console.nextLine();
+        System.out.print("Please enter num: ");
+        int num1 = console.nextInt();
 
-    }
-    static int letterToNumber(char c) {
-        return Character.toTitleCase(c) - 65;
-    }
-//    static int letterToNumber(char c, int offset) {
-//        int c_offset = letterToNumber(c) + offset;
-//        if (c_offset <= 25) {
-//            return c_offset;
-//        } else if (c_offset % 25 == 0) {
-//            return 25;
-//        } else {
-//            return c_offset % 25 - (c_offset / 25);
-//        }
-//    }
+        int max = 1;
+        for (int i = 1; i < Math.max(num, num1); i++) {
+            if (num % i == 0 && num1 % i == 0) {
+                max = i;
+            }
+        }
+        System.out.println(max);
 
-    static int letterToNumber(char c, int offset) {
-        int c_offset = letterToNumber(c) + offset;
-        return c_offset % 26;
     }
 }
