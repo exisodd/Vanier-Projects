@@ -55,11 +55,11 @@ public class ModuloChecker {
         }
 
 
-        System.out.print("Please enter a buffer offset: ");
+        System.out.print("\nPlease enter a buffer offset: ");
         int buffer = console.nextInt();
         int letter_offset = letterToNumber(letter, buffer);
         int letter_base_offset = letterToNumber(letter_base, buffer);
-        System.out.printf("\n-------Offset divisibility ('%c'->%d, '%c'->%d)--------\n",
+        System.out.printf("------Offset divisibility ('%c'->%d, '%c'->%d)--------\n",
                 letter, letter_offset, letter_base, letter_base_offset);
 
         if (isDivisible(letter_offset)) {
