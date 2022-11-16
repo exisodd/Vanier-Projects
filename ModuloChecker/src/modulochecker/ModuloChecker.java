@@ -42,6 +42,7 @@ public class ModuloChecker {
         int letter_num = Integer.parseInt(in3[0]);
         char letter_base = in3[1].charAt(0);
 
+        // Non-buffer offset results
         System.out.printf("\n--------Non-Offset divisibility ('%c'->%d)-----------\n",
                           letter, letterToNumber(letter));
         if (isDivisible(letter)) {
@@ -54,7 +55,7 @@ public class ModuloChecker {
             System.out.printf("'%c' is divisible by '%c'\n", letter, letter_base);
         }
 
-
+        // Buffer offset results
         System.out.print("\nPlease enter a buffer offset: ");
         int buffer = console.nextInt();
         int letter_offset = letterToNumber(letter, buffer);
