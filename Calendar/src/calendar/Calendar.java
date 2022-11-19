@@ -10,7 +10,7 @@ package calendar;
  */
 public class Calendar {
 
-    int year, month, day;
+    private int year, month, day;
 
     public Calendar() {
         year = 2020;

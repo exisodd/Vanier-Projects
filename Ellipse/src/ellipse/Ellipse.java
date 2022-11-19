@@ -10,8 +10,8 @@ public class Ellipse {
 
     private static final int MIN = 5;
     private static final int MAX = 10;
-    double majorAxis;
-    double minorAxis;
+    private double majorAxis;
+    private double minorAxis;
 
     public Ellipse() {
         Random numGenerator = new Random();
