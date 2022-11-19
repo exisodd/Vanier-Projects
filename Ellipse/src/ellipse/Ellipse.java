@@ -1,7 +1,6 @@
 package ellipse;
 
 import java.util.Random;
-import java.util.random.RandomGenerator;
 
 /**
  *

@@ -44,6 +44,9 @@ public class Calendar {
     }
 
     public void increaseYear() {
+        if (isLeapYear() && month == 2 && day == 29) {
+            day = 28;
+        }
         year++;
     }
 
@@ -63,7 +66,7 @@ public class Calendar {
         return switch (month) {
             case 1, 3, 5, 7, 8, 10, 12 -> 31;
             case 4, 6, 9, 11 -> 30;
-            case 2 -> (isLeapYear()) ? 29: 28;
+            case 2 -> (isLeapYear()) ? 29 : 28;
             default -> -1;
         };
     }
