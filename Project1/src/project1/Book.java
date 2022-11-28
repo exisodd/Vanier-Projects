@@ -1,5 +1,7 @@
 package project1;
 
+import java.util.Objects;
+
 public class Book {
 
     private String title;
@@ -9,6 +11,7 @@ public class Book {
     private String isbn;
 
     public Book() {
+        // TODO ??EMPTY MEMBERS OR FILLED NO_TITLE???
         title = "";
         author = "";
         price = 0;
@@ -41,24 +44,31 @@ public class Book {
     }
 
     public int checkIsbnStatus() {
+        // TODO
         return -1;
     }
 
     public void toTitleCase() {
-        String finalAuthor = "";
-        String finalTitle = "";
+        // TODO ????Return value or update members????
+        // Create StringBuilder objects to store new string
+        StringBuilder finalAuthor = new StringBuilder();
+        StringBuilder finalTitle = new StringBuilder();
 
         // Convert each word in author to title case
         for (String word: author.split(" ")) {
-            finalAuthor += Character.toTitleCase(word.charAt(0)) +
-                           word.substring(1).toLowerCase();
+            finalAuthor.append(Character.toTitleCase(word.charAt(0)))
+                       .append(word.substring(1).toLowerCase());
         }
 
         // Convert each word in title to title case
         for (String word: title.split(" ")) {
-            finalTitle += Character.toTitleCase(word.charAt(0)) +
-                    word.substring(1).toLowerCase();
+            finalTitle.append(Character.toTitleCase(word.charAt(0)))
+                      .append(word.substring(1).toLowerCase());
         }
+
+        // Update data members
+        author = finalAuthor.toString();
+        title = finalTitle.toString();
     }
 
     @Override
@@ -68,5 +78,57 @@ public class Book {
                String.format("%-12s: %.2f\n", "Price", price) +
                String.format("%-12s: %s\n", "Publisher", publisher) +
                String.format("%-12s: %s\n", "ISBN", isbn);
+    }
+
+    public boolean equals(Book book) {
+        return book.title.equals(title) &&
+               book.author.equals(author) &&
+               book.publisher.equals(publisher) &&
+               book.isbn.equals(isbn) &&
+               book.price == price;
+    }
+
+    public Book clone() {
+        return new Book(this);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 }
