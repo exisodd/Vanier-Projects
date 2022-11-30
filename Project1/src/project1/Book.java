@@ -44,8 +44,17 @@ public class Book {
     }
 
     public int checkIsbnStatus() {
-        // TODO
-        return -1;
+        int length = isbn.replace("-", "").length();
+        int result = -1;
+        if (length == 10 && isbn.charAt(1) == '-' &&
+            isbn.charAt(6) == '-' && isbn.charAt(11) == '-') {
+            result = 0;
+        } else if (length == 13 && isbn.charAt(3) == '-' &&
+                   isbn.charAt(5) == '-' && isbn.charAt(10) == '-' &&
+                   isbn.charAt(15) == '-') {
+            result = 1;
+        }
+        return result;
     }
 
     public void toTitleCase() {
