@@ -14,7 +14,14 @@ public class Project2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Beverage myBev = new Beverage("Diet Coke", 2, 500);
+        // Beverage myBev2 = new Beverage("Diet Coke", 2, 500);
+        // System.out.println(myBev2.toString());
+        // System.out.println(myBev.toString());
+
+        // TODO dish test / Combo test
+        Dish dish1 = new Dish("Chicken biryani", 'L', 0, true);
+        System.out.println(dish1);
     }
     
 }

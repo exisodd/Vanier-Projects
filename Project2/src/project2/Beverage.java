@@ -42,6 +42,7 @@ public class Beverage {
     }
 
     public boolean equals(Beverage beverage) {
+        // TODO overloaded???
         return volume == beverage.volume && price == beverage.price &&
                beverageName.equals(beverage.beverageName);
     }
@@ -51,7 +52,7 @@ public class Beverage {
         return String.format("%-17s: %s\n", "Beverage ID", beverageId) +
                String.format("%-17s: %s\n", "Beverage Name", beverageName) +
                String.format("%-17s: $%.2f\n", "Beverage Price", price) +
-               String.format("%-17s: %d\n", "Beverage Volume", volume);
+               String.format("%-17s: %d\n", "Beverage", volume);
     }
 
     public String getBeverageId() {
@@ -86,10 +87,4 @@ public class Beverage {
         this.volume = volume;
     }
 
-    public static void main(String[] args) {
-        Beverage myBev = new Beverage("Diet Coke", 2, 500);
-        Beverage myBev2 = new Beverage("Diet Coke", 2, 500);
-        System.out.println(myBev2.toString());
-        System.out.println(myBev.toString());
-    }
 }
