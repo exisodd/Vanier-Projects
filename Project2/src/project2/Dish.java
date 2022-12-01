@@ -60,6 +60,14 @@ public class Dish {
                String.format("%-17s: %s\n", "Spicy", spicy ? "Spicy" : "Not Spicy");
     }
 
+    public String toStringOffset() {
+        return String.format("%10s%-17s: %s\n", " ", "Dish ID", dishId) +
+               String.format("%10s%-17s: %s\n", " ", "Dish Name", dishName) +
+               String.format("%10s%-17s: %s\n", " ", "Dish Size", size) +
+               String.format("%10s%-17s: $%.2f\n", " ", "Dish Price", price) +
+               String.format("%10s%-17s: %s\n", " ", "Spicy", spicy ? "Spicy" : "Not Spicy");
+    }
+
     public String getDishId() {
         return dishId;
     }

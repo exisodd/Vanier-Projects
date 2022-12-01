@@ -15,12 +15,14 @@ public class Combo {
     }
 
     public Combo(Combo combo) {
-        // TODO deep copy
+        // TODO Shallow copy or deep copy?
+        dish = new Dish(combo.dish); // OR dish = combo.dish;
+        beverage = new Beverage(combo.beverage); // OR beverage = combo.beverage;
     }
 
     public double calcComboPrice() {
         // TODO calculate price using calc price or using price variable??
-        return 0.9 * (dish.getPrice() + beverage.calcPrice());
+        return 0.9 * (dish.getPrice() + beverage.getPrice());
     }
 
     public boolean equals(Combo combo) {
@@ -30,9 +32,25 @@ public class Combo {
 
     @Override
     public String toString() {
-        return "Dish:\n" +
-                String.format("%s%s", " ", dish.toString()) +
-                "Beverage:\n" +
-                String.format("%s%s", " ", beverage.toString());
+        return "Dish:\n" + dish.toStringOffset() +
+               "Beverage:\n" + beverage.toStringOffset();
+    }
+
+    public Dish getDish() {
+        return dish;
+    }
+
+    public void setDish(Dish dish) {
+        // TODO shallow copy or deep copy?
+        this.dish = dish;
+    }
+
+    public Beverage getBeverage() {
+        return beverage;
+    }
+
+    public void setBeverage(Beverage beverage) {
+        // TODO shallow copy or deep copy?
+        this.beverage = beverage;
     }
 }

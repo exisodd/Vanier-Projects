@@ -55,6 +55,13 @@ public class Beverage {
                String.format("%-17s: %d\n", "Beverage", volume);
     }
 
+    public String toStringOffset() {
+        return String.format("%10s%-17s: %s\n", " ", "Beverage ID", beverageId) +
+               String.format("%10s%-17s: %s\n", " ", "Beverage Name", beverageName) +
+               String.format("%10s%-17s: $%.2f\n", " ", "Beverage Price", price) +
+               String.format("%10s%-17s: %d\n", " ", "Beverage", volume);
+    }
+
     public String getBeverageId() {
         return beverageId;
     }
