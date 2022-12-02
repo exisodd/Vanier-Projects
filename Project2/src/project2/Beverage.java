@@ -34,15 +34,12 @@ public class Beverage {
     }
 
     public double calcPrice() {
-        if (volume > 500) {
-            return price;
-        } else {
-            return price * 0.6;
-        }
+        return (volume > 500) ? price : 0.6 * price;
     }
 
     public boolean equals(Beverage beverage) {
         // TODO overloaded???
+        // TODO Is equals supposed to compare matching beverage ID?
         return volume == beverage.volume && price == beverage.price &&
                beverageName.equals(beverage.beverageName);
     }
