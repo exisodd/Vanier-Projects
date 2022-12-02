@@ -12,7 +12,7 @@ public class Dish {
     public Dish() {
         dishId = generateId();
         dishName = "";
-        size = 'X';
+        size = 'm';
         price = 0;
         spicy = false;
     }
@@ -38,15 +38,17 @@ public class Dish {
 
     public double calcDishPrice() {
         return switch (size) {
-            case 'X', 'x' -> 1.2 * price;
-            case 'L', 'l' -> price;
-            case 'M', 'm' -> 0.6 * price;
-            case 'S', 's' -> 0.4 * price;
+            case 'x' -> 1.2 * price;
+            case 'l' -> price;
+            case 'm' -> 0.6 * price;
+            case 's' -> 0.4 * price;
             default -> 0;
         };
     }
 
     public boolean equals(Dish dish) {
+        // TODO Overloaded?
+        // TODO Equals compare ID?
         return dishName.equals(dish.dishName) && size == dish.size &&
                price == dish.price && spicy == dish.spicy;
     }
