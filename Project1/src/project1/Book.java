@@ -12,20 +12,20 @@ public class Book {
     private String isbn;
 
     public Book() {
-        // TODO ??EMPTY MEMBERS OR FILLED NO_TITLE???
         title = "";
-        author = "Unknown";
+        author = "";
         price = 0;
         publisher = "To be confirmed";
-        isbn = "0-1234-5678-9";
+        isbn = "0-0000-0000-0";
     }
 
     public Book(String title) {
         this.title = title;
-        this.author = "Unknown";
+        this.author = "";
         this.price = 0;
         this.publisher = "To be confirmed";
-        this.isbn = "0-1234-5678-9";
+        this.isbn = "0-0000-0000-0";
+        toTitleCase();
     }
 
     public Book(String title, String author, double price, String publisher, String isbn) {
@@ -34,6 +34,7 @@ public class Book {
         this.price = price;
         this.publisher = publisher;
         this.isbn = isbn;
+        toTitleCase();
     }
 
     public Book(Book book) {
@@ -169,11 +170,5 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
-    }
-
-    public static void main(String[] args) {
-        Book myBook = new Book("My l i jeff", "stuff like f", 0, "To be confirmed", "978-4-6978-9706-6");
-        myBook.toTitleCase();
-        System.out.println(myBook.toString());
     }
 }
