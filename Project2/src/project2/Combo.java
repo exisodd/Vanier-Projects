@@ -15,14 +15,13 @@ public class Combo {
     }
 
     public Combo(Combo combo) {
-        // TODO Shallow copy or deep copy?
+        // TODO Shallow copy or deep copy? If Deep Copy -> equals returns false because not same ID?
         dish = new Dish(combo.dish); // OR dish = combo.dish;
         beverage = new Beverage(combo.beverage); // OR beverage = combo.beverage;
     }
 
     public double calcComboPrice() {
-        // TODO calculate price using calc price or using price variable??
-        return 0.9 * (dish.getPrice() + beverage.getPrice());
+        return 0.9 * (dish.calcDishPrice() + beverage.calcPrice());
     }
 
     public boolean equals(Combo combo) {
@@ -41,7 +40,6 @@ public class Combo {
     }
 
     public void setDish(Dish dish) {
-        // TODO shallow copy or deep copy?
         this.dish = dish;
     }
 
@@ -50,7 +48,6 @@ public class Combo {
     }
 
     public void setBeverage(Beverage beverage) {
-        // TODO shallow copy or deep copy?
         this.beverage = beverage;
     }
 }
