@@ -6,7 +6,7 @@ public class Tax {
     private double totalTax;
 
     public Tax() {
-        this(5, 9.975, 14.975);
+        this(0, 0, 0);
     }
     public Tax(double fedTax, double proTax, double totalTax) {
         this.fedTax = fedTax;
@@ -26,7 +26,6 @@ public class Tax {
 
     @Override
     public String toString() {
-        // TODO Tax no percentages, with %??
         return String.format("%-10s: $%.3f\n", "Fed Tax", fedTax) +
                String.format("%-10s: $%.3f\n", "Pro Tax", proTax) +
                String.format("%-10s: $%.3f\n", "Total Tax", totalTax);
