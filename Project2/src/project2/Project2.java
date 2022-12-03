@@ -14,29 +14,16 @@ public class Project2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO Beverage test
-        // Beverage myBev = new Beverage("Diet Coke", 2, 500);
-        // Beverage myBev2 = new Beverage("Diet Coke", 2, 500);
-        // System.out.println(myBev2.toString());
-        // System.out.println(myBev.toString());
 
-        // TODO dish test / Combo test
-        // Dish dish1 = new Dish("Chicken biryani", 'L', 0, true);
-        // Beverage myBev = new Beverage("Diet Coke", 2, 500);
-        // Combo myCombo = new Combo(dish1, myBev);
-        // Combo secondCombo = new Combo(myCombo);
-        // Dish dish4 = new Dish("Chicken biryani", 'L', 0, true);
-        // Beverage bev4 = new Beverage("Diets Coke", 2, 500);
-        // Combo thirdCombo = new Combo(dish4, bev4);
-        // System.out.println(myCombo);
-        // System.out.println(secondCombo);
-        // System.out.println(myCombo.equals(thirdCombo));
-
-        // TODO Customer test
-
-        // TODO Tax test
-        Tax myTax = new Tax();
-        System.out.println(myTax);
+        Dish myDish1 = new Dish("Fried Chicken", 'x', 20, true);
+        Dish myDish2 = new Dish("Fried Chicken", 'x', 20, true);
+        Beverage myBev1 = new Beverage("Diet Coke", 2, 500);
+        Beverage myBev2 = new Beverage("Diet Coke", 2, 500);
+        Customer customer1 = new Customer("John", 2, 230);
+        Customer customer2 = new Customer("John", 0, 220);
+        Bill myBill1 = new Bill(myDish1, myBev1, customer1);
+        Bill myBill2 = new Bill(myDish2, myBev2, customer2);
+        System.out.println(myBill1);
     }
     
 }
