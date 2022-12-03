@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c365136-a795-408d-9c7f-fd150f986763" name="Changes" comment="Project 2 partial">
+    <list default="true" id="8c365136-a795-408d-9c7f-fd150f986763" name="Changes" comment="Project 1 partial">
+      <change afterPath="$PROJECT_DIR$/Project3/src/project3/Loan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/src/project1/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/src/project1/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/src/project1/Project1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Project1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3/src/project3/Project3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/src/project3/Project3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,26 +42,13 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Project1">
+  <component name="RunManager" selected="Application.Project3">
     <configuration name="Beverage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project2.Beverage" />
       <module name="Project2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="project2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Book" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project1.Book" />
-      <module name="Project1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,13 +95,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Project3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project3.Project3" />
+      <module name="Project3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Project3" />
         <item itemvalue="Application.Project1" />
         <item itemvalue="Application.Project2" />
         <item itemvalue="Application.Beverage" />
         <item itemvalue="Application.Library" />
-        <item itemvalue="Application.Book" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670033803665</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Project 1 partial">
+      <created>1670035261134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670035261134</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +236,7 @@
     <MESSAGE value="Project" />
     <MESSAGE value="Project 1" />
     <MESSAGE value="Project 2 partial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project 2 partial" />
+    <MESSAGE value="Project 1 partial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project 1 partial" />
   </component>
 </project>
