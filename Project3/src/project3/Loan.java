@@ -7,9 +7,9 @@ public class Loan {
     private int loanTerm;
 
     public Loan(double loan_amount, double annual_interest, int months) {
-        loan = loan_amount;
-        annualInterest = annual_interest;
-        loanTerm = months;
+        setLoanAmount(loan_amount);
+        setAnnualInterestRate(annual_interest);
+        setLoanMonths(months);
     }
 
     public double getLoanAmount() {

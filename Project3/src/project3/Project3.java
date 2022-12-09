@@ -32,10 +32,14 @@ public class Project3 {
             console.nextLine();
 
             // Create and initialize new Loan object
-            Loan aLoan = new Loan(loan, interestRate, months);
+            try {
+                Loan aLoan = new Loan(loan, interestRate, months);
 
-            System.out.println(aLoan); // Loan summary report
-            System.out.println(aLoan.amortize()); // Loan amortization report
+                System.out.println(aLoan); // Loan summary report
+                System.out.println(aLoan.amortize()); // Loan amortization report
+            } catch (IllegalArgumentException e) {
+                System.out.println(e);
+            }
 
             // Do another report?
             System.out.println("Would you like to run another report?\n" +
