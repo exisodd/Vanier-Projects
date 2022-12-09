@@ -15,7 +15,7 @@ public class Book {
         title = "";
         author = "";
         price = 0;
-        publisher = "To be confirmed";
+        publisher = "";
         isbn = "0-0000-0000-0";
     }
 
@@ -23,12 +23,15 @@ public class Book {
         this.title = title;
         this.author = "";
         this.price = 0;
-        this.publisher = "To be confirmed";
+        this.publisher = "";
         this.isbn = "0-0000-0000-0";
         toTitleCase();
     }
 
     public Book(String title, String author, double price, String publisher, String isbn) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative");
+        }
         this.title = title;
         this.author = author;
         this.price = price;
@@ -87,7 +90,6 @@ public class Book {
     }
 
     public void toTitleCase() {
-        // TODO ????Return value or update members????
         // Create StringBuilder objects to store new string
         StringBuilder finalAuthor = new StringBuilder();
         StringBuilder finalTitle = new StringBuilder();
@@ -153,6 +155,9 @@ public class Book {
     }
 
     public void setPrice(double price) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative");
+        }
         this.price = price;
     }
 

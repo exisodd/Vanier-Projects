@@ -16,24 +16,24 @@ public class Project1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<Book> list = new ArrayList<>();
-        Book myBook = new Book("How to speak chinese", "your name", 9.99, "To be confirmed", "978-4-6978-9706-6");
-        Book book2 = new Book("Book 2", "More stuff", 0, "To be confirmed", "978-4-6978-9706-6");
-        list.add(myBook);
-        list.add(book2);
+        ArrayList<Book> bookList = new ArrayList<>();
+        Book myBook1 = new Book("How to speak chinese", "your name",
+                           9.99, "Warner Brothers", "");
+        Book myBook2 = new Book("Book 2", "More stuff",
+                           12.99, "To be confirmed", "978-4-2513-9706-6");
 
-        ArrayList<Book> list2 = new ArrayList<>();
-        Book book1 = new Book("like", "stuff like how", 0, "To be confirmed", "978-4-6978-9706-6");
-        Book book3 = new Book("Book 2", "More stuff", 0, "To be confirmed", "978-4-6978-9706-6");
-        list2.add(book1);
-        list2.add(book3);
+        try {
+            myBook1.setPrice(-2);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+        }
 
-        Library library = new Library(list);
-        Library library2 = new Library(library);
-        list.add(book1);
-        System.out.println(library);
-        ArrayList<Book> searchedList = library.searchBook("How");
-        System.out.println(searchedList);
+        bookList.add(myBook1);
+        bookList.add(myBook2);
+
+        Library myLibrary = new Library(bookList);
+        System.out.println(myLibrary);
+
     }
     
 }

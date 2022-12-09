@@ -14,12 +14,10 @@ public class Library {
     }
 
     public Library(Library library) {
-        // TODO Deep copy or shallow copy of the arraylist?
         books = library.books;
     }
 
     public ArrayList<Book> searchBook(String keyword) {
-        // TODO Should search book be case insensitive?
         ArrayList<Book> result = new ArrayList<>();
         for (Book book: books) {
             if (book.getAuthor().contains(keyword) || book.getTitle().contains(keyword)) {
@@ -54,4 +52,11 @@ public class Library {
         return result.toString();
     }
 
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(ArrayList<Book> books) {
+        this.books = books;
+    }
 }
