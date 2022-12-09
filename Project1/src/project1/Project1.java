@@ -18,9 +18,9 @@ public class Project1 {
     public static void main(String[] args) {
         ArrayList<Book> bookList = new ArrayList<>();
         Book myBook1 = new Book("How to speak chinese", "your name",
-                           9.99, "Warner Brothers", "");
-        Book myBook2 = new Book("Book 2", "More stuff",
-                           12.99, "To be confirmed", "978-4-2513-9706-6");
+                9.99, "Warner brothers", "0-7291-9466-3");
+        Book myBook2 = new Book("Funny tunes", "jerry stewart",
+                12.99, "To be confirmed", "978-4-2513-9706-6");
 
         try {
             myBook1.setPrice(-2);
@@ -33,7 +33,6 @@ public class Project1 {
 
         Library myLibrary = new Library(bookList);
         System.out.println(myLibrary);
-
     }
     
 }

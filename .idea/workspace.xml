@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c365136-a795-408d-9c7f-fd150f986763" name="Changes" comment="Project 3 partial">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/src/project1/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/src/project1/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Library.java" afterDir="false" />
+    <list default="true" id="8c365136-a795-408d-9c7f-fd150f986763" name="Changes" comment="Project 1">
       <change beforePath="$PROJECT_DIR$/Project1/src/project1/Project1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Project1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670102764049</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Project 1">
+      <created>1670557187326</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670557187326</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,10 +246,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project" />
-    <MESSAGE value="Project 1" />
     <MESSAGE value="Project 2 partial" />
     <MESSAGE value="Project 1 partial" />
     <MESSAGE value="Project 3 partial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project 3 partial" />
+    <MESSAGE value="Project 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project 1" />
   </component>
 </project>

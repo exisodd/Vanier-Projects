@@ -29,9 +29,6 @@ public class Book {
     }
 
     public Book(String title, String author, double price, String publisher, String isbn) {
-        if (price < 0) {
-            throw new IllegalArgumentException("Price cannot be negative");
-        }
         this.title = title;
         this.author = author;
         this.price = price;
