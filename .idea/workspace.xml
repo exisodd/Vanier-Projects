@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c365136-a795-408d-9c7f-fd150f986763" name="Changes" comment="Project 1">
+    <list default="true" id="8c365136-a795-408d-9c7f-fd150f986763" name="Changes" comment="Project 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3/src/project3/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/src/project3/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3/src/project3/Project3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project3/src/project3/Project3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1/src/project1/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1/src/project1/Project1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/src/project1/Project1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Project3">
+  <component name="RunManager" selected="Application.Project1">
     <configuration name="Beverage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project2.Beverage" />
       <module name="Project2" />
@@ -110,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Project3" />
         <item itemvalue="Application.Project1" />
+        <item itemvalue="Application.Project3" />
         <item itemvalue="Application.Project2" />
         <item itemvalue="Application.Beverage" />
         <item itemvalue="Application.Library" />
@@ -239,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670557784414</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Project 3">
+      <created>1670558687348</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670558687348</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +266,17 @@
     <MESSAGE value="Project 1 partial" />
     <MESSAGE value="Project 3 partial" />
     <MESSAGE value="Project 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project 1" />
+    <MESSAGE value="Project 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project 3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

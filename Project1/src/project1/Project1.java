@@ -18,14 +18,14 @@ public class Project1 {
     public static void main(String[] args) {
         ArrayList<Book> bookList = new ArrayList<>();
         Book myBook1 = new Book("How to speak chinese", "your name",
-                9.99, "Warner brothers", "0-7291-9466-3");
+                9.99, "Warner brothers", "0-7291-9466-3");;
         Book myBook2 = new Book("Funny tunes", "jerry stewart",
-                12.99, "To be confirmed", "978-4-2513-9706-6");
+                3, "To be confirmed", "978-4-2513-9706-6");;
 
         try {
-            myBook1.setPrice(-2);
+            myBook1.setPrice(-3);
         } catch (IllegalArgumentException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         bookList.add(myBook1);

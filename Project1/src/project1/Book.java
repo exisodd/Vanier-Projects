@@ -29,9 +29,13 @@ public class Book {
     }
 
     public Book(String title, String author, double price, String publisher, String isbn) {
+        try {
+            setPrice(price);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
         this.title = title;
         this.author = author;
-        this.price = price;
         this.publisher = publisher;
         this.isbn = isbn;
         toTitleCase();
