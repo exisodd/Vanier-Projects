@@ -28,16 +28,15 @@ public class Bill {
     }
 
     public Bill(Bill bill) {
-        // TODO Deep copy or shallow copy???
-        this.combo = bill.combo; // OR this.combo = new Combo(bill.combo);
-        this.customer = bill.customer; // OR this.customer = new Combo(bill.customer);
+        this.combo = bill.combo;
+        this.customer = bill.customer;
         this.originalPrice = bill.originalPrice;
         this.discountedPrice = bill.discountedPrice;
-        this.tax = bill.tax; // OR this.tax = new Combo(bill.tax);
+        this.tax = bill.tax;
         this.finalPrice = bill.finalPrice;
     }
 
-    public double calcPriceWithDiscount() {
+    private double calcPriceWithDiscount() {
         return switch (customer.getVipLevel()) {
             case 0 -> originalPrice;
             case 1 -> 0.95 * originalPrice;
@@ -47,8 +46,7 @@ public class Bill {
         };
     }
 
-    public Tax calcTax() {
-        // TODO Is tax applied on originalPrice or finalPrice?
+    private Tax calcTax() {
         double fedTax = 0.05;
         double proTax = 0.1;
         double totalTax = fedTax + proTax;
@@ -56,17 +54,16 @@ public class Bill {
                 totalTax * originalPrice);
     }
 
-    public double calcFinalPrice() {
+    private double calcFinalPrice() {
         return discountedPrice + tax.getTotalTax();
     }
 
-    public void updatePoints() {
+    private void updatePoints() {
         int costPer = 10;
         customer.setPoint(customer.getPoint() + (int) Math.floor(finalPrice / costPer));
     }
 
     public boolean equals(Bill bill) {
-        // TODO overloaded?
         return combo.equals(bill.combo) && customer.equals(bill.customer) &&
                originalPrice == bill.originalPrice &&
                discountedPrice == bill.discountedPrice && tax.equals(bill.tax) &&

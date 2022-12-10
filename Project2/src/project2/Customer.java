@@ -28,8 +28,9 @@ public class Customer {
         this.vipLevel = customer.vipLevel;
         this.point = customer.point;
     }
-    public static String generateId() {
-        return String.format(String.format("C%03d", nextId++));
+
+    private static String generateId() {
+        return String.format("C%03d", nextId++);
     }
 
     public boolean updateVip() {
@@ -72,7 +73,6 @@ public class Customer {
     }
 
     public boolean equals(Customer customer) {
-        // TODO overloaded?
         return name.equals(customer.name) && vipLevel == customer.vipLevel &&
                point == customer.point;
     }

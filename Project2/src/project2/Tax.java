@@ -6,12 +6,18 @@ public class Tax {
     private double totalTax;
 
     public Tax() {
-        this(0, 0, 0);
+        fedTax = 0;
+        proTax = 0;
+        totalTax = 0;
     }
     public Tax(double fedTax, double proTax, double totalTax) {
-        this.fedTax = fedTax;
-        this.proTax = proTax;
-        this.totalTax = totalTax;
+        try {
+            setFedTax(fedTax);
+            setProTax(proTax);
+            setTotalTax(totalTax);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
 
     public Tax(Tax tax) {
@@ -26,9 +32,9 @@ public class Tax {
 
     @Override
     public String toString() {
-        return String.format("%-10s: $%.3f\n", "Fed Tax", fedTax) +
-               String.format("%-10s: $%.3f\n", "Pro Tax", proTax) +
-               String.format("%-10s: $%.3f\n", "Total Tax", totalTax);
+        return String.format("%-10s: $%.2f\n", "Fed Tax", fedTax) +
+               String.format("%-10s: $%.2f\n", "Pro Tax", proTax) +
+               String.format("%-10s: $%.2f\n", "Total Tax", totalTax);
     }
 
     public double getFedTax() {
@@ -36,6 +42,9 @@ public class Tax {
     }
 
     public void setFedTax(double fedTax) {
+        if (fedTax < 0) {
+            throw new IllegalArgumentException("Federal tax cannot be negative");
+        }
         this.fedTax = fedTax;
     }
 
@@ -44,6 +53,9 @@ public class Tax {
     }
 
     public void setProTax(double proTax) {
+        if (proTax < 0) {
+            throw new IllegalArgumentException("Provincial tax cannot be negative");
+        }
         this.proTax = proTax;
     }
 
@@ -52,6 +64,9 @@ public class Tax {
     }
 
     public void setTotalTax(double totalTax) {
+        if (totalTax < 0) {
+            throw new IllegalArgumentException("Total tax cannot be negative");
+        }
         this.totalTax = totalTax;
     }
 }

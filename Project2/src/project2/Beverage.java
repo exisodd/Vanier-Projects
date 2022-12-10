@@ -16,9 +16,13 @@ public class Beverage {
     }
 
     public Beverage(String beverageName, double price, int volume) {
+        try {
+            setPrice(price);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
         this.beverageId = generateId();
         this.beverageName = beverageName;
-        this.price = price;
         this.volume = volume;
     }
 
@@ -29,8 +33,8 @@ public class Beverage {
         this.volume = beverage.volume;
     }
 
-    public static String generateId() {
-        return String.format(String.format("B%03d", nextId++));
+    private static String generateId() {
+        return String.format("B%03d", nextId++);
     }
 
     public double calcPrice() {
@@ -38,8 +42,6 @@ public class Beverage {
     }
 
     public boolean equals(Beverage beverage) {
-        // TODO overloaded???
-        // TODO Is equals supposed to compare matching beverage ID?
         return volume == beverage.volume && price == beverage.price &&
                beverageName.equals(beverage.beverageName);
     }
@@ -50,13 +52,6 @@ public class Beverage {
                String.format("%-17s: %s\n", "Beverage Name", beverageName) +
                String.format("%-17s: $%.2f\n", "Beverage Price", price) +
                String.format("%-17s: %d\n", "Beverage", volume);
-    }
-
-    public String toStringOffset() {
-        return String.format("%10s%-17s: %s\n", " ", "Beverage ID", beverageId) +
-               String.format("%10s%-17s: %s\n", " ", "Beverage Name", beverageName) +
-               String.format("%10s%-17s: $%.2f\n", " ", "Beverage Price", price) +
-               String.format("%10s%-17s: %d\n", " ", "Beverage", volume);
     }
 
     public String getBeverageId() {
@@ -80,6 +75,9 @@ public class Beverage {
     }
 
     public void setPrice(double price) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative");
+        }
         this.price = price;
     }
 

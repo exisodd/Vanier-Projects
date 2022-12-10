@@ -15,9 +15,8 @@ public class Combo {
     }
 
     public Combo(Combo combo) {
-        // TODO Shallow copy or deep copy? If Deep Copy -> equals returns false because not same ID?
-        dish = new Dish(combo.dish); // OR dish = combo.dish;
-        beverage = new Beverage(combo.beverage); // OR beverage = combo.beverage;
+        dish = combo.dish;
+        beverage = combo.beverage;
     }
 
     public double calcComboPrice() {
@@ -25,14 +24,24 @@ public class Combo {
     }
 
     public boolean equals(Combo combo) {
-        // TODO overloaded???
         return dish.equals(combo.dish) && beverage.equals(combo.beverage);
     }
 
     @Override
     public String toString() {
-        return "Dish:\n" + dish.toStringOffset() +
-               "Beverage:\n" + beverage.toStringOffset();
+        // Add offset dish
+        StringBuilder str = new StringBuilder("Dish:\n");
+        for (String s: dish.toString().split("\n")) {
+            str.append("       ").append(s).append("\n");
+        }
+
+        // Add offset beverage
+        str.append("\nBeverage:\n");
+        for (String s: beverage.toString().split("\n")) {
+            str.append("       ").append(s).append("\n");
+        }
+
+        return str.toString();
     }
 
     public Dish getDish() {

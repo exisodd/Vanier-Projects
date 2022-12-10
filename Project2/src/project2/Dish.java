@@ -18,10 +18,14 @@ public class Dish {
     }
 
     public Dish(String dishName, char size, double price, boolean spicy) {
+        try {
+            setPrice(price);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
         this.dishId = generateId();
         this.dishName = dishName;
         this.size = size;
-        this.price = price;
         this.spicy = spicy;
     }
 
@@ -32,8 +36,8 @@ public class Dish {
         this.price = dish.price;
         this.spicy = dish.spicy;
     }
-    public static String generateId() {
-        return String.format(String.format("D%03d", nextId++));
+    private static String generateId() {
+        return String.format("D%03d", nextId++);
     }
 
     public double calcDishPrice() {
@@ -47,8 +51,6 @@ public class Dish {
     }
 
     public boolean equals(Dish dish) {
-        // TODO Overloaded?
-        // TODO Equals compare ID?
         return dishName.equals(dish.dishName) && size == dish.size &&
                price == dish.price && spicy == dish.spicy;
     }
@@ -60,14 +62,6 @@ public class Dish {
                String.format("%-17s: %s\n", "Dish Size", size) +
                String.format("%-17s: $%.2f\n", "Dish Price", price) +
                String.format("%-17s: %s\n", "Spicy", spicy ? "Spicy" : "Not Spicy");
-    }
-
-    public String toStringOffset() {
-        return String.format("%10s%-17s: %s\n", " ", "Dish ID", dishId) +
-               String.format("%10s%-17s: %s\n", " ", "Dish Name", dishName) +
-               String.format("%10s%-17s: %s\n", " ", "Dish Size", size) +
-               String.format("%10s%-17s: $%.2f\n", " ", "Dish Price", price) +
-               String.format("%10s%-17s: %s\n", " ", "Spicy", spicy ? "Spicy" : "Not Spicy");
     }
 
     public String getDishId() {
@@ -99,6 +93,9 @@ public class Dish {
     }
 
     public void setPrice(double price) {
+        if (price < 0) {
+            throw new IllegalArgumentException("Price cannot be negative");
+        }
         this.price = price;
     }
 
