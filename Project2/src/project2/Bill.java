@@ -73,7 +73,7 @@ public class Bill {
     @Override
     public String toString() {
         return combo.toString() +
-               String.format("%40s\n", " ").replace(' ', '*') +
+               "*".repeat(40) + "\n" +
                String.format("%-20s: %s - L%d\n", "Customer",
                              customer.getCustomerId(), customer.getVipLevel()) +
                String.format("%-20s: $%.2f\n", "Original Price", originalPrice) +
@@ -81,7 +81,7 @@ public class Bill {
                String.format("%-20s: $%.2f\n", "Fed Tax", tax.getFedTax()) +
                String.format("%-20s: $%.2f\n", "Pro Tax", tax.getProTax()) +
                String.format("%-20s: $%.2f\n", "Total Tax", tax.getTotalTax()) +
-               String.format("%40s\n", " ").replace(' ', '-') +
+               "-".repeat(40) + "\n" +
                String.format("%-20s: $%.2f\n", "Final Price Tax", finalPrice);
     }
 
